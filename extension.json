@@ -1,0 +1,27 @@
+{
+	"name": "NetworkLink",
+	"version": "1.0.0-alpha4",
+	"author": [
+		"Marko Ilic (gesinn.it GmbH & Co. KG)"
+	],
+	"url": "https://github.com/gesinn-it/NetworkLink",
+	"descriptionmsg": "networkLink-desc",
+	"license-name": "GPL-3.0-or-later",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.35"
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\NetworkLink\\": "./src/"
+	},
+	"ExtensionMessagesFiles": {
+		"NetworkLinkMagic": "NetworkLink.i18n.magic.php"
+	},
+	"MessagesDirs": {
+		"NetworkLink": [
+			"i18n"
+		]
+	},
+	"load_composer_autoloader": true,
+	"manifest_version": 1
+}
