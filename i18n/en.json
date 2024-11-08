@@ -4,5 +4,5 @@
 			"Marko Ilic"
 		]
 	},
-	"networkLink-desc": "Link to a network drive or a file on LAN."
+	"networkLink-desc": "Provides a tag <networklink> to link to local file system or network locations."
 }

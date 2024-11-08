@@ -14,6 +14,11 @@
 	"AutoloadNamespaces": {
 		"MediaWiki\\Extension\\NetworkLink\\": "./src/"
 	},
+    "Hooks": {
+		"ParserFirstCallInit": [
+			"MediaWiki\\Extension\\NetworkLink\\NetworkLink::onParserFirstCallInit"
+		]
+	},
 	"ExtensionMessagesFiles": {
 		"NetworkLinkMagic": "NetworkLink.i18n.magic.php"
 	},
