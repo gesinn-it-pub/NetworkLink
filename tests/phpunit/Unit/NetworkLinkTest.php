@@ -14,7 +14,7 @@ use PPFrame;
 class NetworkLinkTest extends TestCase {
 
     /**
-     * Mock the parser object for the tests.
+     * @var Parser Mocked parser object
      */
     private $parser;
 
@@ -42,7 +42,10 @@ class NetworkLinkTest extends TestCase {
      * Test <link> tag without any attributes.
      */
     public function testLinkTagWithoutAttributes() {
-        $output = NetworkLink::renderNetworkLink( 'https://example.com', [], $this->parser, $this->createMock( PPFrame::class ) );
+        $output = NetworkLink::renderNetworkLink( 'https://example.com', 
+                                                [], 
+                                                $this->parser, 
+                                                $this->createMock( PPFrame::class ) );
 
         $expected = '<a href="https://example.com" target="_blank" title="https://example.com">https://example.com</a>';
         $this->assertEquals( $expected, $output );
