@@ -13,7 +13,7 @@ class NetworkLink {
      */
     public static function onParserFirstCallInit( Parser $parser ) {
         // Register the tag hook for <networklink>
-        $parser->setHook( 'networklink', [ __CLASS__, 'renderLink' ] );
+        $parser->setHook( 'networklink', [ __CLASS__, 'networklink' ] );
     }
 
     /**
@@ -25,14 +25,17 @@ class NetworkLink {
      * @param PPFrame $frame The parser frame
      * @return string Rendered HTML link
      */
-    public static function renderLink( $input, array $args, Parser $parser, PPFrame $frame ) {
-        // Extract the 'path' argument if present
+    public static function networklink( $input, array $args, Parser $parser, PPFrame $frame ) {
+        // Extract the 'path' argument if present, otherwise use the input text
         $path = isset( $args['path'] ) ? $args['path'] : $input;
 
         // Sanitize the file path to prevent any security issues
         $sanitizedPath = htmlspecialchars( $path, ENT_QUOTES, 'UTF-8' );
 
+        // Use $input for the link text
+        $linkText = $input ?: "Open File";  // Default to "Open File" if no input is provided
+
         // Return an HTML link that opens the file with a 'file://' protocol
-        return "<a href='file://$sanitizedPath' target='_blank'>$sanitizedPath</a>";
+        return "<a href='file://$sanitizedPath' target='_blank'>$linkText</a>";
     }
 }

@@ -7,18 +7,21 @@
 	"url": "https://github.com/gesinn-it/NetworkLink",
 	"descriptionmsg": "networkLink-desc",
 	"license-name": "GPL-3.0-or-later",
-	"type": "other",
+	"type": "parserhook",
 	"requires": {
 		"MediaWiki": ">= 1.35"
 	},
-	"AutoloadNamespaces": {
-		"MediaWiki\\Extension\\NetworkLink\\": "./src/"
-	},
-    "Hooks": {
+	"Hooks": {
 		"ParserFirstCallInit": [
 			"MediaWiki\\Extension\\NetworkLink\\NetworkLink::onParserFirstCallInit"
 		]
 	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\NetworkLink\\": "./src/"
+	},
+	"AutoloadClasses": {
+        "NetworkLink": "src/NetworkLink.php"
+    },
 	"ExtensionMessagesFiles": {
 		"NetworkLinkMagic": "NetworkLink.i18n.magic.php"
 	},
