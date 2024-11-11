@@ -22,7 +22,7 @@ class NetworkLinkTest extends TestCase {
         parent::setUp();
         
         // Mock the Parser class
-        $this->parser = $this->createMock(Parser::class);
+        $this->parser = $this->createMock( Parser::class );
     }
 
     /**
