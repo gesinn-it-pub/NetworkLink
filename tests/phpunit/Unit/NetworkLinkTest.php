@@ -2,9 +2,9 @@
 
 namespace MediaWiki\Extension\NetworkLink\Tests;
 
-use PHPUnit\Framework\TestCase;
 use MediaWiki\Extension\NetworkLink\NetworkLink;
 use Parser;
+use PHPUnit\Framework\TestCase;
 use PPFrame;
 
 /**
