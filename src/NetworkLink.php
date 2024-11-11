@@ -52,6 +52,6 @@ class NetworkLink {
         }
 
         // Return the HTML link with the appropriate target and title
-        return sprintf( '<a href="file://%1$s" target="%2$s" title="%3$s">%3$s</a>', $sanitizedPath, $targetAttr, $linkTitle );
+        return sprintf( '<a href="%1$s" target="%2$s" title="%3$s">%3$s</a>', $sanitizedPath, $targetAttr, $linkTitle );
     }
 }
