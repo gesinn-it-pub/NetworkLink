@@ -4,7 +4,6 @@ namespace MediaWiki\Extension\NetworkLink;
 
 use Parser;
 use PPFrame;
-use MediaWiki\MediaWikiServices;
 
 class NetworkLink {
 
